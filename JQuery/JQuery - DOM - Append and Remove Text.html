@@ -5,14 +5,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function appendText() {
-            var txt1 = "<p>Text1.</p>"; // Create text with HTML
-            var txt2 = $("<p></p>").text("Text2."); // Create text with jQuery 
+            // Create text with HTML
+            var txt1 = "<p>Text1</p>";
+            // Create text with jQuery 
+            var txt2 = $("<p></p>").text("Text2_Query");
             txt2.attr({
                 class: "p1"
             });
+            // Create text with DOM
             var txt3 = document.createElement("p");
-            txt3.innerHTML = "Text3."; // Create text with DOM
-            $("body").append(txt1, txt2, txt3); // Append new elements 
+            txt3.innerHTML = "Text3";
+            // Append new elements 
+            $("body").append(txt1, txt2, txt3);
         }
 
         function removeText() {
